@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='static/css/styles.css' type='text/css'/>
+        <script type='text/javascript' src='static/js/scripts.js'></script>
+        <script type='text/javascript' src='static/js/Chart.min.js'></script>
+        </style>
+
+    </head>
+    <body>
+
+        <div class='left-col'>
+            <canvas id='lane-graph' width=800 height= 750></canvas>
+        </div>
+        <div class='left-col'>
+            <img src="https://v-tron.nl/wp-content/uploads/logo.png" alt="logo" width="310">
+        </div>
+        <div class='left-col'>
+            <h1 align="center">camera view</h1>
+            <img id="bg" src="{{ url_for('video_feed') }}">
+        </div>
+
+
+        <div class='left-col'>
+            <canvas id='speed-graph' width=400 height=250></canvas>
+            <canvas id='heading-graph' width=400 height=250></canvas>
+        </div>
+
+ 
+    </body>
+</html>

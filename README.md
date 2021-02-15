@@ -48,8 +48,9 @@ For lane width calculation execute mobileye_width.py in seperate terminal
   python mobileye_width.py
 ```
 
-to have the camera view ,additional camera is required  
+to have the camera view ,additional camera is required  instead of app.py execute app_cam.py
 ```bash
-  python camera.py
+  python app_cam.py
 ```
+![[camera]](./images/camera.png)
 

@@ -1,19 +1,15 @@
-#python script to display camera view
-import numpy as np
+#python script to display camera view using python and send data to html
 import cv2
 
-cap = cv2.VideoCapture(-1)
-
-while(True):
-    # Capture frame-by-frame
-    ret, frame = cap.read()
-    frame = cv2.flip(frame,1)
-
-    # Display the resulting frame
-    cv2.imshow('V-tron cam',frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-# When everything done, release the capture
-cap.release()
-cv2.destroyAllWindows()
+class VideoCamera(object):
+    def __init__(self):
+        self.video = cv2.VideoCapture(-1) #camera input 
+    
+    def __del__(self):
+        self.video.release()
+    
+    def get_frame(self):
+        success, image = self.video.read()
+        flip = cv2.flip(image,1)
+        ret, jpeg = cv2.imencode('.jpg', flip)
+        return jpeg.tobytes()
