@@ -1,0 +1,15 @@
+div.left-col {
+    float:left;
+}
+
+div.right-col {
+    float:left;
+}
+
+div.right-col > * {
+    display:block;
+}
+
+body {
+    background-color: lightblue;
+  }
