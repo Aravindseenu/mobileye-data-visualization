@@ -54,4 +54,7 @@ to have the camera view ,additional camera is required  instead of app.py execut
 ```
 ![[camera]](./images/camera.png)
 
-note: the web page ip and ports can be altered 
+note: the web page ip and ports can be altered
+
+## credits
+https://github.com/falafel72/mobileye_viewer
